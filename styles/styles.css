@@ -1,0 +1,89 @@
+/*RESUME*/
+.header{
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin: 20%;
+  
+}
+
+.resume {
+  width: 100%;
+  padding: 1%;
+  /*background-color: grey;*/
+  border-radius: 25px;
+  margin: 20%;
+}
+
+.resume-table {
+  padding: 1%;
+  /*background-color: blue;*/
+}
+
+.resume-block {
+  padding: 1%;
+  background-color: #d0c8cf;
+  border-style: solid;
+  border-width: 1px;
+  vertical-align: top;
+}
+
+.resume-title {
+  width: 10%;
+  padding: 1%;
+  text-align: center;
+  /*background-color: orange;*/
+  margin-right: auto;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.resume-info {
+  width: 70%;
+  padding: 1%;
+  /*background-color: yellow;*/
+  margin-left: auto;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.resume-info-block {
+  padding: 1%;
+  /*background-color: green;*/
+  border-style: solid;
+  border-width: 1px;
+}
+
+/*CONTACT ME*/
+.contact-me-form{
+  width: 50%;
+  height: 325px;
+  padding: 1% 2%;
+  /*background-color: grey;*/
+  margin-right: auto;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.input-sender{
+  width: 50%;
+  height: 20px;
+  margin: 1%;
+  margin-left: auto;
+}
+
+.input-message{
+  width: 100%;
+  height: 140px;
+  margin: 1%;
+  margin-left: auto;
+}
+
+.contact-me-info{
+  margin-left: auto;
+  display:inline-block;
+  vertical-align: top;
+  background-color: blue;
+  width: 30%;
+}
+

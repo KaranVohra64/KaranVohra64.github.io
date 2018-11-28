@@ -1,0 +1,96 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+#main-content{
+	width: 80%;
+	height: 100%;
+	position: relative;
+	background-color: yellow;
+	display: inline-block;
+	margin: auto;
+}
+
+#web-contact{
+	width: 50%;
+	height: 500px;
+	background-color: orange;
+	margin: 25px;
+	text-align: left;
+	display: inline-block;
+	padding: 20px;
+	position: relative;
+}
+
+#other-contact{
+	width: 20%;
+	background-color: red;
+	position: relative;
+	display: inline-block;
+	float: right;
+	margin: 20px;
+	padding: 20px;
+}
+
+.input-field-name{
+	width: 40%;
+	margin: 5px;
+	display: inline-block;
+}
+
+.input-field-email{
+	width: 90%;
+	margin: 5px;
+}
+
+.input-field-message{
+	width: 90%;
+	margin: 5px;
+
+}
+
+.message-input{
+	width: 100%;
+	min-height: 250px;
+	margin: 5px 0px;
+	resize: none;
+	padding: 5px;
+	overflow: scroll;
+}
+
+.email-input{
+	width: 100%;
+	margin: 5px 0px;
+	padding: 5px;
+}
+
+.name-input{
+	width: 80%;
+	margin: 5px 0px;
+	padding: 5px;
+}
+
+.form-label{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: 'Arial Black';
+}
+
+.submit{
+	background-color: blue;
+	width: 100px;
+	height: 30px;
+	margin: 0 40%;
+	padding: 5px;
+	font-size: 18px;
+	border: none;
+
+}
+
+
+

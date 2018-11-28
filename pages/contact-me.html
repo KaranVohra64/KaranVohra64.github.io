@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../styles/contact-me-styles.css">
+    <script type="text/javascript" src="../scripts/header-footer.js"></script>
+    <script type="text/javascript" src="../scripts/content-size.js"></script>
+  </head>
+  <body onload='initHF(); initMainContent();'>
+    <div id='main-content'>
+      
+      <div id='web-contact'>
+        <form action='../scripts/contact-me.php' method='post'>
+          
+          <div class='input-field-name'>
+            <label class='form-label' for='fname'> First Name </label>
+            <input class='name-input' type='text' id='fname' name='firstName' placeholder='Your first name...'>
+          </div>
+          
+          <div class='input-field-name'>
+            <label class='form-label' for='lname'> Last Name </label>
+            <input class='name-input' type='text' id='lname' name='lastName' placeholder='Your last name...'>
+          </div>
+
+          <div class='input-field-email'>
+            <label class='form-label' for='email'> Email </label>
+            <input class='email-input' type='text' id='email' name='emailAddress' placeholder='Your email address...'>
+          </div>
+          
+          <div class='input-field-message'> 
+            <label class='form-label' for='subject'> Message </label>
+            <textarea class='message-input' id='subject' name='message' placeholder='Your message...'></textarea>
+          </div>
+
+          <input class='submit' type='submit' value='Send'>
+
+        </form>
+      </div>
+
+      <div id='other-contact'>
+        <p>
+          Phone:
+          <br>
+          (650) 704-9317
+          <br><hr><br>
+          Email:
+          <br>
+          karanvohra64@gmail.com
+        </p>
+
+      </div>
+
+    </div>
+
+    <?php require '../styles.contact-me.php'; ?>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+#main-content{
+	width: 80%;
+	height: 100%;
+	position: relative;
+	background-color: yellow;
+	text-align: center;
+	display: inline-block;
+	margin: auto;
+
+}
+
+#button-container{
+	background-color: gray;
+	margin: 1%;
+	padding: 1%;
+	position: relative;
+}
+
+.project-button{
+	width: 20%;
+	height: auto;
+	background-color: green;
+	display: inline-block;
+	margin: 1%;
+	position: relative;
+	overflow: hidden;
+}
+
+.project-button-bg{
+	width: 100%;
+	height: auto;
+	display: none;
+}
+
+.project-label{
+	width: 100%;
+	height: 30%;
+	background-color: orange;
+	position: absolute;
+	top: 35%;
+}
+
+.project-title {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: auto;
+	
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.7vw;
+	font-family: 'Arial Black';
+
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+#overview-container{
+	width: 98%;
+	height: 98%;
+	background-color: gray;
+	position: relative;
+	margin: 1%;
+	display: none;
+}
+
+.project-container{
+	width: 98%;
+	height: 98%;
+	position: relative;
+	background-color: pink;
+	margin: 1%;
+	display: none;
+}
+
+.project-directory{
+	width: 20%;
+	height: 100%;
+	background-color: red;
+	position: relative;
+	float: left;
+	margin: 1%;
+}
+
+.project-selector{
+	width: 90%;
+	height: 90%;
+	background-color: blue;
+	position: relative;
+	margin: 5%;
+}
+
+.project-name{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+	
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5vw;
+	font-family: 'Arial Black';
+}
+
+.project-viewer{
+	width: 75%;
+	height: 100%;
+	background-color: green;
+	position: relative;
+	display: inline-block;
+	margin: 1%;
+}
+
+.project-overview-selector{
+	width: 98%;
+	height: 98%;
+	background-color: orange;
+	position: relative;
+	margin: 1%;
+	display: none;
+}
+
+
+
+
+
+
+
+
