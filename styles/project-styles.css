@@ -1,23 +1,29 @@
 html {
   height: 100%;
+  background-color: #99ccff;
 }
 body {
   min-height: 100%;
+  margin: 0px;
 }
 
 #main-content{
 	width: 80%;
 	height: 100%;
+	/*min-height: 500px;*/
 	position: relative;
-	background-color: yellow;
+	background-color: white;
 	text-align: center;
 	display: inline-block;
-	margin: auto;
+	/*margin: auto;*/
+	margin-left: 10%;
+	border-radius: 10px;
+	padding-top: 25px;
 
 }
 
 #button-container{
-	background-color: gray;
+	/*background-color: gray;*/
 	margin: 1%;
 	padding: 1%;
 	position: relative;
@@ -31,6 +37,7 @@ body {
 	margin: 1%;
 	position: relative;
 	overflow: hidden;
+	border-radius: 10px;
 }
 
 .project-button-bg{
@@ -42,9 +49,10 @@ body {
 .project-label{
 	width: 100%;
 	height: 30%;
-	background-color: orange;
+	background-color: #0000e6;
 	position: absolute;
 	top: 35%;
+	border-radius: 0px;
 }
 
 .project-title {
@@ -56,7 +64,7 @@ body {
 	color: white;
 	text-align: center;
 	font-weight: bold;
-	font-size: 1.7vw;
+	font-size: 1.5vw;
 	font-family: 'Arial Black';
 
 }
@@ -81,7 +89,7 @@ body {
 #overview-container{
 	width: 98%;
 	height: 98%;
-	background-color: gray;
+	/*background-color: gray;*/
 	position: relative;
 	margin: 1%;
 	display: none;
@@ -91,15 +99,17 @@ body {
 	width: 98%;
 	height: 98%;
 	position: relative;
-	background-color: pink;
+	background-color: #8585ad;
 	margin: 1%;
 	display: none;
+	border-radius: 10px;
 }
 
 .project-directory{
 	width: 20%;
 	height: 100%;
-	background-color: red;
+	background-color: #00004d;
+	border-radius: 10px;
 	position: relative;
 	float: left;
 	margin: 1%;
@@ -109,6 +119,7 @@ body {
 	width: 90%;
 	height: 90%;
 	background-color: blue;
+	border-radius: 10px;
 	position: relative;
 	margin: 5%;
 }
@@ -129,7 +140,8 @@ body {
 .project-viewer{
 	width: 75%;
 	height: 100%;
-	background-color: green;
+	background-color: #00004d;
+	border-radius: 10px;
 	position: relative;
 	display: inline-block;
 	margin: 1%;
@@ -138,7 +150,8 @@ body {
 .project-overview-selector{
 	width: 98%;
 	height: 98%;
-	background-color: orange;
+	background-color: #f0f0f5;
+	border-radius: 10px;
 	position: relative;
 	margin: 1%;
 	display: none;

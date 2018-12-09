@@ -11,9 +11,9 @@ function header(){
 
 	div.style.width = '100%';
 	div.style.height = '100%';
-	div.style.backgroundColor = 'blue';
-	div.style.paddingBottom = '2%';
-	div.style.marginBottom = '2%';
+	//div.style.backgroundColor = 'blue';
+	div.style.paddingBottom = '1%';
+	div.style.marginBottom = '1%';
 
 	var before = document.getElementById('main-content'); 
 
@@ -35,7 +35,7 @@ function topBar(){
 
 	div.style.width = '100%';
 	div.style.height = '100%';
-	div.style.backgroundColor = 'orange';
+	div.style.backgroundColor = '#0000e6';
 	div.style.position = 'sticky';
 	div.style.top = '0'
 
@@ -51,10 +51,10 @@ function pageTitle(){
 
 	div.id = 'page-title';
 
-	div.style.width = '30%';
+	div.style.width = '80%';
 	div.style.height = '50%';
-	div.style.margin = 'auto';
-	div.style.backgroundColor = 'purple';
+	div.style.margin = '0 auto';
+	//div.style.backgroundColor = 'purple';
 
 	var parent = document.getElementById('header');
 
@@ -70,8 +70,13 @@ function addTitle(){
 	title.id = 'title-text';
 
 	title.style.textAlign = 'center';
-	title.style.fontSize = '50px';
 	title.innerHTML = name;
+
+	title.style.fontSize = '80px';
+	title.style.position = 'relative';
+	title.style.color = 'white';
+	title.style.fontFamily = 'Arial Black';
+	title.style.margin = '0 auto';
 
 	var parent = document.getElementById('page-title');
 
@@ -87,23 +92,25 @@ function populateTopBar(){
 	logoDiv.id = 'header-logo';
 	accountDiv.id = 'header-account';
 
-	menuDiv.style.backgroundColor = 'yellow';
+	menuDiv.style.backgroundColor = 'white';
 	menuDiv.style.position = 'absolute';
 	menuDiv.style.width = '4%';
+	menuDiv.style.minWidth = '40px';
 	menuDiv.style.height = '100%';
 	menuDiv.style.top = '0px';
 	menuDiv.style.left = '0px';
 	menuDiv.style.display = 'block';
 
-	logoDiv.style.backgroundColor = 'red';
+	logoDiv.style.backgroundColor = '#0000e6';
 	logoDiv.style.position = 'relative';
-	logoDiv.style.width = '4%';
+	logoDiv.style.width = '170px';
 	logoDiv.style.height = '100%';
+	logoDiv.style.minHeight = '40px';
 	logoDiv.style.display = 'block';
 	logoDiv.style.margin = '0 auto';
 
 
-	accountDiv.style.backgroundColor = 'green';
+	accountDiv.style.backgroundColor = 'white';
 	accountDiv.style.position = 'absolute';
 	accountDiv.style.width = '4%';
 	accountDiv.style.height = '100%';
@@ -121,7 +128,8 @@ function populateTopBar(){
 	popMenu = function() {
 		var image = document.createElement('img');
 		image.src = '../media/hamburger.png';
-		image.style.width = '80%';
+		image.style.width = '100%';
+		image.style.height = '40px';
 		image.style.maxWidth = (menuDiv.offsetWidth * .8) + 'px';
 		console.log(menuDiv.offsetHeight); //why the fuck does this not work?!?!
 
@@ -131,7 +139,12 @@ function populateTopBar(){
 
 	popLogo = function() {
 		var text = document.createElement('p');
-		text.innerHTML = 'logo';
+		text.innerHTML = '-1 Playground';
+
+		text.style.fontSize = '20px';
+		text.style.color = 'white';
+		text.style.fontFamily = 'Arial Black';
+		text.style.margin = '0 auto';
 
 		var parent = document.getElementById('header-logo');
 		parent.appendChild(text);
@@ -139,7 +152,7 @@ function populateTopBar(){
 
 	popAccount = function() {
 		var text = document.createElement('p');
-		text.innerHTML = 'account';
+		text.innerHTML = '-DNF-';
 
 		var parent = document.getElementById('header-account');
 		parent.appendChild(text);
@@ -183,7 +196,7 @@ function makeDiv(){
 	div.style.width = '20%';
 	div.style.height = 'auto';
 	div.style.position = 'relative';
-	div.style.backgroundColor = 'red';
+	div.style.backgroundColor = '#0000e6';
 	div.style.padding = '.5%';
 
 	return div;
@@ -225,17 +238,27 @@ function enableButtons(){
 
 	menu.onclick = function(){
 		if(menuOpen == 0){
-			//debugger;
 			nav.style.display = 'block';
+			main.style.marginLeft = '0%'
 			openNavigation(nav, menuButton, main);
 			menuOpen = 1;
 		}
 		else if(menuOpen == 1){
 			closeNavigation(nav, menuButton);
+			main.style.marginLeft = '10%'
 			menuOpen = 0;
 		}
 	};
 }
+
+
+function reformatNavigation(){
+	var div = document.getElementById('navigation');
+	var size = getDistance();
+
+	div.style.height = size + 'px';
+}
+
 
 function navigation(){
 	var size = getDistance();
@@ -246,8 +269,8 @@ function navigation(){
 
 	div.style.width = '15%';
 	div.style.height = size + 'px';
-	div.style.backgroundColor = 'grey';
-	div.style.position = 'relative';
+	div.style.backgroundColor = '#00004d';
+	div.style.position = 'sticky';
 	div.style.float = 'left';
 
 	var parent = document.getElementById('header');
@@ -269,8 +292,8 @@ function openNavigation(nav, menu, main){
 	var curMenuWidth = parseFloat(menu.style.width.slice(0, -1));
 	var curNavWidth = parseFloat(nav.style.width.slice(0, -1));
 
-	console.log(document.getElementById('main-content'))
-	console.log(document.getElementById('main-content').style.marginLeft)
+	//console.log(document.getElementById('main-content'))
+	//console.log(document.getElementById('main-content').style.marginLeft)
 
 	if(curMenuWidth < 15){
 		if(curNavWidth < curMenuWidth){
@@ -312,9 +335,9 @@ function populateMenu(){
 		div.id = 'nav-button-' + (i+1);
 		div.style.width = '100%';
 		div.style.height = '50px';
-		div.style.backgroundColor = 'red';
+		div.style.backgroundColor = '#0000e6';
 		div.style.margin = '5px 0px';
-		div.style.position = 'relative';
+		div.style.position = 'sticky';
 		div.style.overflow = 'hidden';
 
 		parent.appendChild(div);

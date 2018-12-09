@@ -1,23 +1,31 @@
 html {
   height: 100%;
+  background-color: #99ccff;
 }
 body {
   min-height: 100%;
+  margin: 0px;
 }
 
 #main-content{
 	width: 80%;
 	height: 100%;
+	/*min-height: 500px;*/
 	position: relative;
-	background-color: yellow;
+	background-color: white;
+	/*text-align: center;*/
 	display: inline-block;
-	margin: auto;
+	/*margin: auto;*/
+	margin-left: 10%;
+	border-radius: 10px;
+	padding-top: 25px;
 }
 
 #web-contact{
 	width: 50%;
 	height: 500px;
-	background-color: orange;
+	background-color: #8585ad;
+	border-radius: 10px;
 	margin: 25px;
 	text-align: left;
 	display: inline-block;
@@ -27,12 +35,19 @@ body {
 
 #other-contact{
 	width: 20%;
-	background-color: red;
+	background-color: #8585ad;
+	border-radius: 10px;
 	position: relative;
 	display: inline-block;
 	float: right;
 	margin: 20px;
 	padding: 20px;
+
+	font-family: 'Arial Black';
+	color: #0000e6;
+	font-weight: bold;
+	font-size: .8vw;
+	text-shadow: 1px 1px #00004d;
 }
 
 .input-field-name{
@@ -89,6 +104,7 @@ body {
 	padding: 5px;
 	font-size: 18px;
 	border: none;
+	border-radius: 10px;
 
 }
 

@@ -30,9 +30,12 @@ function initSlideshow(getButtons){
 		}
 
 		button.onclick = function(){
+			//console.log(document.getElementById('main-content').offsetHeight)
 			moveButtons(getButtons, this);
 			var overview = displayOverview(this);
 			initOverview(overview);
+			reformatNavigation(); //did a thing here
+			//console.log(document.getElementById('main-content').offsetHeight)
 		}
 	}
 }
@@ -82,22 +85,27 @@ function moveButtons(getButtons, self){
 		labelButton.id = 'project-' + (i+1);
 
 		if(i+1 == curIndex){
-			labelButton.style.backgroundColor = 'purple';
+			labelButton.style.backgroundColor = '#e6e600';
+			text.style.color = '#0000e6';
 			cur = labelButton;
 		}
 
 		labelButton.style.width = '20%';
 		labelButton.style.margin = '1%';
 		labelButton.style.display = 'inline-block';
+		labelButton.style.borderRadius = '10px'
 
 		parent.appendChild(labelButton);
 
 		labelButton.onclick = function(){
 			var overview = displayOverview(this);
 			initOverview(overview);
-			this.style.backgroundColor = 'purple';
+			this.style.backgroundColor = '#e6e600';
+			this.getElementsByClassName('project-title')[0].style.color = '#0000e6';
 			cur.style.backgroundColor = null;
+			cur.getElementsByClassName('project-title')[0].style.color = null;
 			cur = this;
+			reformatNavigation(); //did a thing here
 		}
 	}
 }
@@ -115,7 +123,8 @@ function initOverview(overview){
 	var initSelector = getProjectSelectors[0];
 
 	initOverview.style.display = 'block';
-	initSelector.style.backgroundColor = 'purple';
+	initSelector.style.backgroundColor = '#e6e600';
+	initSelector.getElementsByClassName('project-name')[0].style.color = '#0000e6';
 
 	for(var i = 0; i < getProjectSelectors.length; i++){
 		var selector = getProjectSelectors[i];
@@ -123,14 +132,15 @@ function initOverview(overview){
 			var index = this.id.split('-')[1] - 1;
 			var nextOverview = getProjectOverviewSelectors[index]
 
-			console.log(nextOverview);
-
 			initSelector.style.backgroundColor = null;
-			this.style.backgroundColor = 'purple';
+			initSelector.getElementsByClassName('project-name')[0].style.color = null;
+			this.style.backgroundColor = '#e6e600';
+			this.getElementsByClassName('project-name')[0].style.color = '#0000e6';
 			initSelector = this;
 			initOverview.style.display = 'none';
 			nextOverview.style.display = 'block';
 			initOverview = nextOverview;
+			reformatNavigation(); //did a thing here
 
 		}
 	}
@@ -157,6 +167,27 @@ function displayOverview(button){
 	}
 
 	return returnOverview;
+}
+
+function reformatNavigation(){
+	var div = document.getElementById('navigation');
+	var size = getDistance();
+
+	div.style.height = size + 'px';
+}
+
+function getDistance(){
+	console.log('got distance');
+	var footer = document.getElementById('footer');
+	var topBar = document.getElementById('header-top-bar');
+
+	var heightF = footer.offsetHeight;
+	var heightTB = topBar.offsetHeight;
+	var heightWin = document.body.offsetHeight;
+
+	var distance = heightWin - heightF - heightTB;
+
+	return distance;
 }
 
 

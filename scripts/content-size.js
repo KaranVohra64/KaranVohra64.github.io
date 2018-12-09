@@ -9,7 +9,7 @@ function initMainContent(){
 
 	var whiteSpace = winHeight - (headerHeight + footerHeight + mainHeight);
 
-	var newMainHeight = winHeight - (headerHeight + footerHeight) - 70;
+	var newMainHeight = winHeight - (headerHeight + footerHeight) - 40;
 
 	main.style.minHeight = newMainHeight + 'px';
 
